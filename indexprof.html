@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mr Aden Sheikh Abdullahi</title>
+
+
+
+<style>
+
+:root {
+
+  --dark-blue: #151E3E;
+
+  --white: #FFFFFF;
+
+  --gold: #D4AF37;
+
+  --glow: rgba(212,175,55,0.35);
+
+}
+
+
+
+body{
+
+  margin:0;
+
+  font-family:"Segoe UI", Tahoma, sans-serif;
+
+  background: var(--dark-blue);
+
+  color: var(--white);
+
+  font-size:14px;
+
+}
+
+
+
+/* ===== NAVBAR ===== */
+
+.navbar {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 12px 20px;
+
+  position: sticky;
+
+  top: 0;
+
+  background: var(--dark-blue);
+
+  z-index: 999;
+
+}
+
+
+
+.logo img {
+
+  height: 50px;
+
+  width: auto;
+
+}
+
+
+
+/* Hamburger styling */
+
+.hamburger {
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  width: 28px;
+
+  height: 22px;
+
+  cursor: pointer;
+
+}
+
+
+
+.hamburger span {
+
+  display: block;
+
+  height: 3px;
+
+  background-color: var(--gold);
+
+  border-radius: 2px;
+
+  transition: 0.3s;
+
+}
+
+
+
+.hamburger:hover span {
+
+  background-color: var(--white);
+
+}
+
+
+
+/* ===== HERO ===== */
+
+.hero{
+
+  max-width:1100px;
+
+  margin:10px auto 40px;
+
+  padding:0 20px;
+
+}
+
+.hero-intro {
+
+  text-align: center;
+
+  font-size: clamp(0.9rem, 2vw, 1.5rem);
+
+  font-weight: normal;
+
+  color: #FFFFFF;
+
+  display: inline-block;
+
+}
+
+
+
+.hero-intro span {
+
+  display: inline-block;
+
+  opacity: 0;
+
+  transform: translate(var(--x-offset), var(--y-offset)) scale(1.5);
+
+  border-radius: 50%;
+
+  padding: 0 2px;
+
+  animation: bubbleToSentence 6s ease-in-out infinite alternate;
+
+  margin: 0 1px;
+
+}
+
+
+
+@keyframes bubbleToSentence {
+
+  0% {opacity: 0; transform: translate(var(--x-offset), var(--y-offset)) scale(1.5);}
+
+  50%,100% {opacity:1; transform: translate(0,0) scale(1);}
+
+}
+
+@media (max-width:480px){
+
+  .hero-intro{
+
+    top:10px; /* move text closer to top */
+
+  }
+
+}
+
+
+
+.hero-frame{
+
+  height: 300px;
+
+  border-radius:16px;
+
+  overflow:hidden;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.25);
+
+}
+
+.hero-frame{
+
+  height:auto;      /* automatically adjusts to image height */
+
+  min-height:180px; /* ensures minimum size */
+
+}
+
+
+
+.hero-images{
+
+  display:flex;
+
+  width:300%;
+
+  height:100%;
+
+  animation:slide 18s infinite;
+
+}
+
+
+
+.hero-images img{
+
+  width:100%;
+
+  object-fit:cover;
+
+}
+
+
+
+@keyframes slide{
+
+  0%{transform:translateX(0);}
+
+  33%{transform:translateX(-100%);}
+
+  66%{transform:translateX(-200%);}
+
+  100%{transform:translateX(0);}
+
+}
+
+
+
+/* ===== PROFILE BUTTON ===== */
+
+.profile-btn-container{
+
+  text-align:center;
+
+  margin-bottom:20px;
+
+}
+
+
+
+.profile-btn{
+
+  background:none;
+
+  border:2px solid var(--gold);
+
+  border-radius:30px;
+
+  padding:10px 24px;
+
+  color:var(--gold);
+
+  font-size:14px;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+}
+
+
+
+.profile-btn:hover{
+
+  background:var(--gold);
+
+  color:var(--dark-blue);
+
+}
+
+
+
+/* ===== PROFILE TEXT ===== */
+
+.profile-text{
+
+  display:none;
+
+  max-width:900px;
+
+  margin:auto;
+
+  padding:20px;
+
+  line-height:1.6;
+
+  color: var(--white);
+
+  font-size:13px;
+
+  background: rgba(21,30,62,0.6);
+
+  border-radius:12px;
+
+  max-height:500px;
+
+  overflow-y:auto;
+
+  box-sizing:border-box;
+
+}
+
+
+
+/* ===== LANDING CTA BUTTON ===== */
+
+.landing-cta{
+
+  text-align:center;
+
+  margin-top:20px;
+
+}
+
+
+
+/* ===== LANDING DROPDOWN ===== */
+
+.dropdown{
+
+  max-width:700px;
+
+  margin:20px auto;
+
+  display:none;
+
+  padding:20px;
+
+  box-sizing:border-box;
+
+}
+
+
+
+.link-item{
+
+  text-align:left;
+
+  margin-bottom:12px;
+
+}
+
+
+
+.text-link{
+
+  color:var(--gold);
+
+  font-size:14px;
+
+  cursor:pointer;
+
+  display:inline-block;
+
+  margin-bottom:6px;
+
+}
+
+
+
+.text-link:hover{
+
+  color:var(--white);
+
+}
+
+
+
+.preview-card{
+
+  display:none;
+
+  background: var(--white);
+
+  color: var(--dark-blue);
+
+  padding:16px;
+
+  border-radius:12px;
+
+  box-shadow:0 0 18px var(--glow);
+
+  margin-bottom:16px;
+
+  animation:fade 0.4s ease;
+
+}
+
+
+
+@keyframes fade{
+
+  from{opacity:0; transform:translateY(-6px);}
+
+  to{opacity:1; transform:translateY(0);}
+
+}
+
+
+
+/* --- Resume Link --- */
+
+    .action-list {
+
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0;
+
+}
+
+
+
+.action-list li {
+
+  margin-bottom: 10px;
+
+}
+
+
+
+.resume-link {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+
+
+  font-size: 12px;          /* very small */
+
+  font-weight: 700;         /* high weight / bold */
+
+
+
+  color: #FFFFFF;           /* WHITE */
+
+  text-decoration: none;
+
+
+
+  transition: opacity 0.2s;
+
+}
+
+
+
+.resume-link svg {
+
+  width: 14px;
+
+  height: 14px;
+
+
+
+  fill: none;                 /* remove thin fill */
+
+  stroke: currentColor;       /* white */
+
+  stroke-width: 2.5;          /* THICKNESS CONTROL */
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+
+
+
+  animation: downloadPulse 1.6s infinite ease-in-out;
+
+}
+
+/* Subtle professional animation */
+
+@keyframes downloadPulse {
+
+  0% {
+
+    transform: translateY(0);
+
+    opacity: 1;
+
+  }
+
+  50% {
+
+    transform: translateY(3px);
+
+    opacity: 0.6;
+
+  }
+
+  100% {
+
+    transform: translateY(0);
+
+    opacity: 1;
+
+  }
+
+}
+
+
+
+.resume-link:hover {
+
+  opacity: 0.85;
+
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+
+  position: sticky;
+
+  bottom: 0;
+
+  width: 100%;
+
+  text-align: center;
+
+  font-size: 11px;
+
+  color: #FFFFFF;               /* WHITE text */
+
+  padding: 8px 0;
+
+  background: #151E3E;          /* Dark blue background */
+
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+
+  position:sticky;
+
+  bottom:0;
+
+  width:100%;
+
+  text-align:center;
+
+  font-size:11px;
+
+  color: rgba(212,175,55,0.25);
+
+  padding:8px 0;
+
+  background: var(--dark-blue);
+
+}
+
+
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+
+@media (max-width:768px){
+
+  .hero-frame{
+
+    height:220px;
+
+  }
+
+
+
+  .profile-text{
+
+    font-size:12px;
+
+  }
+
+
+
+  .profile-btn{
+
+    padding:8px 20px;
+
+  }
+
+
+
+  .hero-intro{
+
+    font-size:1rem;
+
+  }
+
+}
+
+
+
+@media (max-width:480px){
+
+  .hero-frame{
+
+    height:180px;
+
+  }
+
+
+
+  .hero-intro{
+
+    font-size:0.9rem;
+
+  }
+
+
+
+  .profile-text{
+
+    font-size:11px;
+
+    padding:14px;
+
+  }
+
+
+
+  .navbar{
+
+    padding:10px 16px;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+  <div class="logo"><img src="ksr_logo.png" alt="Logo"></div>
+
+  <div class="hamburger">☰</div>
+
+</div>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <p class="hero-intro" id="heroIntro">
+
+    My personal space to share who I am and how to reach me.
+
+  </p>
+
+  <div class="hero-frame">
+
+    <div class="hero-images">
+
+      <img src="hero_image1.png" alt="Hero Image 1">
+
+      <img src="hero_image2.png" alt="Hero Image 2">
+
+      <img src="hero_image3.png" alt="Hero Image 3">
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- PROFILE BUTTON -->
+
+<div class="profile-btn-container">
+
+  <button class="profile-btn" onclick="toggleProfile()">View Profile</button>
+
+</div>
+
+
+
+<!-- PROFILE TEXT -->
+
+<div class="profile-text" id="profileText">
+
+  <!-- profile content here -->
+
+  <h2>Mr Aden Sheikh Abdullahi</h2>
+
+  <p><strong>DOB:</strong> 12/12/1994 | <strong>Location:</strong> Garissa, Kenya</p>
+
+  <p>
+
+I am a purpose-driven individual with a strong passion for growth, learning, and meaningful impact. My journey has been shaped by curiosity, discipline, and a constant desire to improve both myself and the environments I am part of. I approach every opportunity with an open mind and a commitment to excellence, believing that consistency and integrity are the foundations of lasting success. Whether working independently or collaboratively, I value clarity, responsibility, and results that speak for themselves.
+
+</p>
+
+
+
+<p>
+
+I am deeply interested in technology, digital solutions, and how innovation can be used to solve real-world challenges. I believe technology is most powerful when it is practical, accessible, and people-centered. This belief drives my interest in digital skills, systems, and tools that improve efficiency, communication, and empowerment. I continuously seek to expand my knowledge and adapt to new trends, understanding that learning is not a one-time event but a lifelong process.
+
+</p>
+
+
+
+<p>
+
+Beyond technical interests, I am motivated by community development and positive social impact. I value initiatives that empower individuals, especially youth, by equipping them with relevant skills and confidence to navigate the modern world. I believe that sustainable development starts with knowledge sharing, mentorship, and creating opportunities that allow people to unlock their potential. Contributing to such growth gives my work deeper meaning and purpose.
+
+</p>
+
+
+
+<p>
+
+I describe myself as focused, reliable, and goal-oriented. I take pride in planning carefully, paying attention to detail, and following through on commitments. Challenges motivate me rather than discourage me, as I see them as opportunities to learn and refine my abilities. I am comfortable working in dynamic environments and remain calm under pressure, always striving to deliver quality outcomes within set timelines.
+
+</p>
+
+
+
+<p>
+
+Ultimately, my goal is to continue building skills, experience, and impact in ways that align with my values and long-term vision. I aim to grow professionally while remaining grounded, ethical, and service-oriented. By combining knowledge, creativity, and dedication, I seek to contribute meaningfully to projects and initiatives that create lasting value for individuals, organizations, and communities.
+
+</p>
+
+</div>
+
+
+
+<!-- LANDING PAGE CTA BUTTON -->
+
+<div class="landing-cta">
+
+  <button class="profile-btn" onclick="toggleLanding()">Explore Detailed Profile</button>
+
+</div>
+
+
+
+<!-- ===== LANDING DROPDOWN ===== -->
+
+<div class="dropdown" id="landing">
+
+  <div class="link-item">
+
+    <div class="text-link" onclick="toggleCard('education')">
+
+    Education & Certifications
+
+  </div>
+
+
+
+  <div class="preview-card" id="education">
+
+    <p>
+
+      I hold a Bachelor of Science in Information Science, which has equipped me
+
+      with strong competencies in research, proposal writing, and data management.
+
+      I also earned a Diploma in Information Technology, providing practical
+
+      knowledge in IT systems, software, and networking. My professional
+
+      certifications include Cisco Certified Network Associate (CCNA) from
+
+      AFRALTI, Microsoft Azure Cloud Computing certification, Project Management
+
+      from Coursera, Graphic Design from Webb’s Institute, and Leadership Skills
+
+      training through the Young African Leaders Initiative (YALI) Network.
+
+    </p>
+
+  </div>
+
+
+
+</div>
+
+
+
+  <div class="link-item">
+
+    <div class="text-link" onclick="toggleCard('skills')">
+
+    Skills & Experience
+
+  </div>
+
+
+
+  <div class="preview-card" id="skills">
+
+    <p>
+
+      I have hands-on experience in IT and networking, including network setup,
+
+      troubleshooting, cloud deployment, computer repair, and help desk support.
+
+      My professional skills also extend to research and proposal writing, data
+
+      analysis, and graphic design for digital and community-based projects.
+
+    </p>
+
+  </div>
+
+  </div>
+
+  <div class="text-link" onclick="toggleCard('leadership')">
+
+    Leadership & Community Engagement
+
+  </div>
+
+
+
+  <div class="preview-card" id="leadership">
+
+    <p>
+
+      I serve as the Chairperson of the Garissa Digital Empowerment Hub (CBO),
+
+      where I lead community digital initiatives, manage projects, and coordinate
+
+      team activities. Through this role and my involvement in the YALI Network,
+
+      I have developed strong leadership, organizational, and project management
+
+      skills focused on community empowerment.
+
+    </p>
+
+  </div>
+
+  
+
+  
+
+  <div class="link-item">
+
+    <div class="text-link" onclick="toggleCard('driving')">
+
+    Driving & Safety Expertise
+
+  </div>
+
+
+
+  <div class="preview-card" id="driving">
+
+    <p>
+
+      I am a licensed Class BCE driver with over ten years of private long-distance
+
+      driving experience. I am also certified in defensive driving and first aid
+
+      through St John’s Ambulance, demonstrating a strong commitment to safety,
+
+      responsibility, and emergency preparedness.
+
+    </p>
+
+  </div>
+
+
+
+</div>
+
+
+
+  
+
+  <!-- Resume Download Icon + Text -->
+
+<ul class="action-list">
+
+  <li>
+
+    <a href="my_resume.pdf" download class="resume-link">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+
+        <path d="M5 20h14v-2H5v2zm7-18v12l5-5h-3V2h-4v7H7l5 5z"/>
+
+      </svg>
+
+      Download Resume
+
+    </a>
+
+  </li>
+
+
+
+  <li>
+  <a href="javascript:void(0)" onclick="viewCert()" class="resume-link">
+    👁️ View Certificates
+  </a>
+</li>
+</ul>
+
+<footer>
+
+©2026 Aden Sheikh Abdullahi · All rights reserved
+
+<p>📞 +254728428431 / +254705299600</p>
+
+<p>✉️ sonofkarie@gmail.com</p>
+
+</footer>
+
+
+
+<script>
+function toggleProfile() {
+  const profile = document.getElementById('profileText');
+  profile.style.display = profile.style.display === 'block' ? 'none' : 'block';
+}
+
+function toggleLanding() {
+  const landing = document.getElementById('landing');
+  landing.style.display = landing.style.display === 'block' ? 'none' : 'block';
+}
+
+function toggleCard(id) {
+  const card = document.getElementById(id);
+  card.style.display = card.style.display === 'block' ? 'none' : 'block';
+}
+
+function viewCertificates() {
+  alert("Here you can view Aden's certificates. Replace with modal or PDF/images.");
+}
+
+// Hero text bubble effect
+const heroText = document.getElementById("heroIntro");
+const text = heroText.textContent;
+heroText.textContent = "";
+const colors = ["#D4AF37", "#FF6B6B", "#4AC9FF", "#FFD93D", "#FF6BFF"];
+text.split("").forEach((char, index) => {
+  const span = document.createElement("span");
+  span.textContent = char === " " ? "\u00A0" : char;
+  const xOffset = (Math.random() * 200 - 100) + "px";
+  const yOffset = (Math.random() * 100 - 50) + "px";
+  span.style.setProperty("--x-offset", xOffset);
+  span.style.setProperty("--y-offset", yOffset);
+  span.style.color = colors[Math.floor(Math.random() * colors.length)];
+  span.style.animationDelay = `${index * 0.05}s`;
+  heroText.appendChild(span);
+});
+
+// Your viewCert function for Node.js token
+async function viewCert() {
+  try {
+    // 1️⃣ Request token
+    const res = await fetch("/token");
+    const data = await res.json();
+
+    // 2️⃣ Open PDF with token
+    const url = `/cert?token=${data.token}`;
+    window.open(url, "_blank");
+  } catch (err) {
+    alert("Failed to fetch token");
+  }
+}
+
+</script>
+
+</body>
+
+</html>
